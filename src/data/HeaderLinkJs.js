@@ -2,97 +2,16 @@ export default[
     {
         text:'Сервисы',
         link:'#',
-        menuNone:[
-            {
-                text:'О конструкторе',
-                link:'#',
-                id:'v1',
-            },
-
-            {
-                text:'Тарифы',
-                link:'#',
-                id:'v2',
-            },
-
-            {
-                text:'База респондентов',
-                link:'#',
-                id:'v3',
-            },
-
-            {
-                text:'Демо-версия',
-                link:'#',
-                id:'v4',
-            },
-
-            {
-                text:'Конструктор тестов',
-                link:'#',
-                id:'v5',
-            },
-
-            {
-                text:'Образцы анкет',
-                link:'#',
-                id:'v6',
-            },
-        ]
     },
 
     {
         text:'Продукты',
-        link:'#',
-        menuNone:[
-            {
-                text:'Anketolog BOX',
-                link:'#',
-                id:'p1',
-            },
-
-            {
-                text:'Rapid',
-                link:'#',
-                id:'p2',
-            },
-        ]
+        link:'/OurProducts',
     },
 
     {
         text:'Услуги',
-        link:'#',
-        menuNone:[
-            {
-                text:'Маркетинговые исследования',
-                link:'#',
-                id:'o1',
-            },
-
-            {
-                text:'Тестирование макетов',
-                link:'#',
-                id:'o2',
-            },
-
-            {
-                text:'Опросы потребителей',
-                link:'#',
-                id:'o3',
-            },
-
-            {
-                text:'Опросы сотрудников',
-                link:'#',
-                id:'o4',
-            },
-
-            {
-                text:'Оценка узнаваемости бренда',
-                link:'#',
-                id:'o5',
-            },
-        ]
+        link:'/Services',
     },
 
     {
@@ -101,20 +20,14 @@ export default[
         menuNone:[
             {
                 text:'Каталог исследований',
-                link:'#',
+                link:'/OurConstructor',
                 id:'j1',
             },
 
             {
                 text:'О магазине исследований',
-                link:'#',
+                link:'/ResearchStore',
                 id:'j2',
-            },
-
-            {
-                text:'Специальные предложения',
-                link:'#',
-                id:'j3',
             },
         ]
     },
@@ -125,62 +38,20 @@ export default[
         menuNone:[
             {
                 text:'О компании',
-                link:'#',
+                link:'/about',
                 id:'M1',
             },
 
             {
                 text:'Контакты',
-                link:'#',
+                link:'/contacts',
                 id:'M2',
             },
 
             {
                 text:'Блог',
-                link:'#',
+                link:'/InformationResource',
                 id:'M3',
-            },
-
-            {
-                text:'Пользовательское соглашение',
-                link:'#',
-                id:'M4',
-            },
-
-            {
-                text:'Политика обработки персон. данных',
-                link:'#',
-                id:'M5',
-            },
-
-            {
-                text:'Договор об оказании услуг',
-                link:'#',
-                id:'M6',
-            },
-
-            {
-                text:'Правила для создателей анкет',
-                link:'#',
-                id:'M7',
-            },
-
-            {
-                text:'Правила для респондентов',
-                link:'#',
-                id:'M7',
-            },
-
-            {
-                text:'Акционерам',
-                link:'#',
-                id:'M9',
-            },
-
-            {
-                text:'Разработчикам',
-                link:'#',
-                id:'M10',
             },
         ]
     },

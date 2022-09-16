@@ -2,13 +2,13 @@
     <Carousel class="ResearchStore__list" :settings="settings" :breakpoints="breakpoints">
 
         <Slide class="ResearchStore__item" v-for="(research,index) in researchs" :key="index">
-            <a :href="research.link">
+            <router-link :to="research.link + research.id">
                 <h4 class="ResearchStore__data"><span><i class="fas fa-calendar-day"></i></span> {{research.data}}</h4>
                 <div class="ResearchStore__img">
                     <img :src="research.img" :alt="research.data">
                 </div>
                 <h3 class="ResearchStore__title__h3">{{research.title}}</h3>
-            </a>
+            </router-link>
         </Slide>
 
         <template #addons>

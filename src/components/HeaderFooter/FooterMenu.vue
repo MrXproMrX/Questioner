@@ -1,11 +1,11 @@
 <template>
     <ul class="footer__menu__list">
         <li v-for="(menu,index) in menus" :key="index">
-           <a class="footer__menu__link" :href="menu.link">{{menu.text}}</a>
+           <router-link class="footer__menu__link" :to="menu.link">{{menu.text}}</router-link>
 
             <ul v-if="menu.menuNone" class="footer__menu__none">
                 <li v-for="none in menu.menuNone" :key="none.id">
-                    <a class="footer__none__link" :href="none.link">{{none.text}}</a>
+                    <router-link class="footer__none__link" :to="none.link">{{none.text}}</router-link>
                 </li>
             </ul>
         </li>

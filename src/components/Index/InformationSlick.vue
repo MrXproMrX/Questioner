@@ -1,7 +1,7 @@
 <template>
     <Carousel class="Information__list" :settings="settings" :breakpoints="breakpoints">
         <Slide class="Information__item" v-for="(resource,index) in resources" :key="index">
-            <a :href="resource.link">
+            <router-link :to="resource.link + resource.id">
                 <div class="Information__img">
                     <img :src="resource.img" :alt="resource.title">
                 </div>
@@ -16,7 +16,7 @@
                 <div class="Information__text">
                     <p>{{resource.text}}</p>
                 </div>
-            </a>
+            </router-link>
         </Slide>
 
         <template #addons>
