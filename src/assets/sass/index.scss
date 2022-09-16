@@ -1,6 +1,9 @@
 @import './files/color';
 @import './files/fonts';
 @import './files/mixins';
+@import '_AboutCompany';
+@import '_Contacts';
+@import '_ResearchStoreIn';
 
 
 body{
@@ -1034,7 +1037,7 @@ body{
         margin: 0 20px;
 
         span{
-            margin-left: 5px;
+            margin-right: 5px;
             color: $blue;
         }
     }
@@ -1274,6 +1277,22 @@ body{
         text-overflow: ellipsis;
         white-space: normal;
     }
+
+    &__list__cart{
+        display: flex;
+        align-items:flex-start;
+        grid-gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    &__item__cart{
+        flex: 0 0 32%;
+        width: 100%;
+        padding: 25px;
+        background-color:$link;
+        filter: drop-shadow(0px 0px 24px rgba(51, 51, 51, 0.1));
+        min-height: 330px;
+    }
 }
 
 // Research Store end
@@ -1443,6 +1462,26 @@ body{
         text-overflow: ellipsis;
         white-space: normal;
     }
+
+    &__list__cart{
+        display: flex;
+        align-items:flex-start;
+        flex-wrap: wrap;
+        grid-gap: 20px;
+    }
+
+    &__item__cart{
+        flex: 0 0 23%;
+        width: 100%;
+        filter: drop-shadow(0px 0px 24px rgba(51, 51, 51, 0.1));
+        background-color:$link;
+        min-height: 360px;
+        border-radius: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+    }
 }
 
 // Information resource end
@@ -1596,7 +1635,17 @@ body{
     .ResearchStore__list,
     .ResearchStore__number,
     .Information__list,
-    .footer__list{
+    .footer__list,
+    .questioner_qbout__list,
+    .we_don__list,
+    .persons__cart,
+    .contact_us__cart,
+    .team__cart,
+    .contacts__list,
+    .requisites__list,
+    .ResearchStore__list__cart,
+    .Information__list__cart,
+    .ResearchStoreIn__list{
         margin-left: 60px;
         margin-right: 60px;
     }
@@ -1632,7 +1681,15 @@ body{
     .our_constructor,
     .ResearchStore,
     .Information,
-    .ResearchStore__list{
+    .ResearchStore__list,
+    .contact_us,
+    .about,
+    .questioner_qbout + .questioner_qbout,
+    .we_don,
+    .persons,
+    .requisites,
+    .contacts,
+    .ResearchStoreIn{
         margin-bottom: 60px;
     }
 }
@@ -1663,7 +1720,23 @@ body{
     .marketing {
         padding: 180px 0;
     }
+
+    .Information__item__cart{
+        flex: 0 0 32%;
+    }
 }
+
+
+@media (max-width:1150px){
+    .ResearchStore__item__cart{
+        flex: 0 0 48%;
+    }
+
+    .Information__item__cart{
+        flex: 0 0 31%;
+    }
+}
+
 
 @media (max-width:1000px){
     .our_constructor__cartList {
@@ -1739,6 +1812,10 @@ body{
     .ResearchStore__cart {
         padding: 60px 0;
     }
+
+    .Information__item__cart{
+        flex: 0 0 48%;
+    }
 }
 
 @media (max-width:650px){
@@ -1752,7 +1829,17 @@ body{
     .ResearchStore__list,
     .ResearchStore__number,
     .Information__list,
-    .footer__list{
+    .footer__list,
+    .questioner_qbout__list,
+    .we_don__list,
+    .persons__cart,
+    .contact_us__cart,
+    .team__cart,
+    .contacts__list,
+    .requisites__list,
+    .ResearchStore__list__cart,
+    .Information__list__cart,
+    .ResearchStoreIn__list{
         margin-left: 30px;
         margin-right: 30px;
     }
@@ -1777,8 +1864,25 @@ body{
     .our_constructor, 
     .ResearchStore, 
     .Information, 
-    .ResearchStore__list {
+    .ResearchStore__list,
+    .contact_us,
+    .about,
+    .questioner_qbout + .questioner_qbout,
+    .we_don,
+    .persons,
+    .questioner_qbout,
+    .contacts,
+    .requisites,
+    .ResearchStoreIn{
         margin-bottom: 30px;
+    }
+
+    .ResearchStore__item__cart{
+        flex: 0 0 100%;
+    }
+
+    .Information__item__cart{
+        flex: 0 0 47%;
     }
 }
 
@@ -1872,6 +1976,10 @@ body{
     .marketing__brand{
         padding: 30px 80px 20px 80px;
     }
+
+    .Information__item__cart{
+        flex: 0 0 100%;
+    }
 }
 
 @media (max-width:500px){
@@ -1895,6 +2003,7 @@ body{
     .marketing__title__h1 {
         font-size: 28px;
     }
+
 }
 
 @media (max-width:400px){
@@ -1912,5 +2021,9 @@ body{
 
     .products__item {
         padding: 20px;
+    }
+
+    .ResearchStore__img__item {
+        width: 230px;
     }
 }

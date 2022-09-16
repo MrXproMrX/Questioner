@@ -1,0 +1,488 @@
+
+// about start
+
+.about{
+    padding: 210px 0;
+    margin-bottom: 120px;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 5;
+    margin-top: -100px;
+
+    &::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(52, 73, 94, 0.9);
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &__fon{
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -o-object-position: center center;
+        object-position: center center;
+    }
+
+    &__title__h2{
+        @include fontAll(56px,300,$link);
+        line-height: 120%;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+// about end
+
+
+// About Questioner start
+
+.questioner_qbout{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 60px;
+
+    .ResearchStore__text__item{
+        max-height: initial;
+        -webkit-line-clamp: inherit;
+    }
+
+
+    &__list{
+        display: flex;
+        grid-gap: 30px;
+        align-items:center;
+        min-width: auto;
+    }
+
+    &__item{
+        flex: 0 0 58%;
+        width: 58%;
+        height: auto;
+    }
+
+    &__right{
+        height: 100%;
+        flex: 0 0 40%;
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: absolute;
+        top: 0;
+        right: 0;
+        img{
+            border-radius: 999px 0px 0px 999px;
+            -webkit-border-radius: 999px 0px 0px 999px;
+            -moz-border-radius: 999px 0px 0px 999px;
+            -ms-border-radius: 999px 0px 0px 999px;
+            -o-border-radius: 999px 0px 0px 999px;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.questioner_qbout + .questioner_qbout{
+    margin-bottom: 120px;
+}
+
+// About Questioner end
+
+
+// We don't stand still start
+
+.we_don{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 120px;
+
+    &__left{
+        height: 100%;
+        flex: 0 0 40%;
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: absolute;
+        top: 0;
+        left: 0;
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 0px 999px 999px 0px;
+            -webkit-border-radius: 0px 999px 999px 0px;
+            -moz-border-radius: 0px 999px 999px 0px;
+            -ms-border-radius: 0px 999px 999px 0px;
+            -o-border-radius: 0px 999px 999px 0px;
+        }
+    }
+
+    &__item{
+        flex: 0 0 58%;
+        width: 58%;
+        height: auto;
+    }
+
+    &__list{
+        display: flex;
+        align-items:center;
+        grid-gap: 30px;
+        justify-content: space-between;
+        min-height: auto;
+        flex-direction: row-reverse;
+    }
+
+    &__text{
+        @include fontAll(14px,400,$text);
+        line-height: 120%;
+        margin-top: 24px;
+        margin-bottom: 40px;
+    }
+
+    &__menu{
+        display: flex;
+        align-items:flex-start;
+        grid-gap: 20px;
+        flex-direction: column;
+        padding-bottom: 10px;
+        li{
+            position: relative;
+        }
+    }
+
+    &__title__h3{
+        @include fontAll(14px,600,$text);
+        line-height: 120%;
+        padding-left: 13px;
+        padding-top: 2px;
+
+        &::after{
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-color:rgba(176, 215, 230, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            border-radius:50%;
+            -webkit-border-radius:50%;
+            -moz-border-radius:50%;
+            -ms-border-radius:50%;
+            -o-border-radius:50%;
+        }
+    }
+}
+// We don't stand still end
+
+
+// The first persons of the company start
+
+.persons{
+    position: relative;
+    margin-bottom: 120px;
+    .products__title__h2{
+        text-align: center;
+    }
+
+    &__list{
+        display: flex;
+        align-items:flex-start;
+        grid-gap: 20px;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    &__item{
+        flex: 0 0 32%;
+        height: 100%;
+        width: 100%;
+        background-color: $link;
+        box-shadow: 0px 4px 16px rgba(51, 51, 51, 0.1);
+        border-radius: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+        padding: 40px;
+    } 
+
+    &__img{
+        @include fiximg(100%,320px,true);
+        margin-bottom: 24px;
+    }
+
+    &__name{
+        @include fontAll(20px,400,$text);
+        line-height: 120%;
+        margin-bottom: 10px;
+    }
+
+    &__text{
+        @include fontAll(12px,700,#828282);
+        line-height: 120%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+}
+
+// The first persons of the company end
+
+
+// You can always contact us start
+
+.contact_us{
+    position: relative;
+    margin-bottom: 120px;
+    .products__title__h2{
+        text-align: center;
+    }
+
+    &__text{
+        @include fontAll(14px,400,$text);
+        line-height: 120%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    &__list{
+        display: flex;
+        align-items:flex-start;
+        grid-gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    &__item{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        flex-direction: column;
+        flex: 0 0 22%;
+        width: 100%;
+        height: auto;
+        background-color:$link;
+        box-shadow: 0px 4px 16px rgba(51, 51, 51, 0.1);
+        border-radius: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+        padding: 20px 40px;
+        min-height: 280px;
+    }
+
+    &__img{
+        @include fiximg(48px,48px,false);
+        margin-bottom: 30px;
+    }
+
+    &__title__h2{
+        @include fontAll(16px,700,$text);
+        line-height: 120%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__email{
+        @include fontAll(16px,400,$blue);
+        display: inline-block;
+    }
+
+    &__number{
+        display: flex;
+        align-items:center;
+        grid-gap: 5px;
+        margin-top: 5px;
+        flex-wrap: wrap;
+    }
+
+    &__number__link{
+        @include fontAll(12px,400,$text);
+        line-height: 120%;
+    }
+}
+
+// You can always contact us end
+
+
+// team start
+
+.team{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 140px 0;
+
+    &__fon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        z-index: -1;
+    }
+
+    &__text{
+        @include fontAll(32px,400,$link);
+        line-height: 130%;
+        text-align: center;
+        position: relative;
+        padding: 30px 0;
+
+        &::after{
+            content: "";
+            width: 120px;
+            height: 2px;
+            background-color:$link;
+            position: absolute;
+            top:0;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            -ms-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+        }
+
+
+        &::before{
+            content: "";
+            width: 120px;
+            height: 2px;
+            background-color:$link;
+            position: absolute;
+            bottom:0;
+            left: 50%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            -ms-transform: translate(-50%,0);
+            -o-transform: translate(-50%,0);
+        }
+    }
+}
+
+// team end
+
+
+@media (max-width:1200px){
+    .about{
+        padding: 150px 0;
+    }
+
+    .persons__item,
+    .contact_us__item{
+        flex: 0 0 47%;
+    }
+
+    .team__text {
+        font-size: 26px;
+    }
+
+    .team {
+        padding: 80px 0;
+    }
+
+    .persons__name {
+        font-size: 18px;
+    }
+
+    .about__title__h2 {
+        font-size: 48px;
+    }
+}
+
+
+@media (max-width:800px){
+    .persons__item, .contact_us__item {
+        flex: 0 0 100%;
+    }
+
+    .persons__img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 24px;
+    }
+
+    .about__title__h2 {
+        font-size: 42px;
+    }
+
+    .about{
+        padding: 130px 0;
+    }
+
+    .team {
+        padding: 60px 0;
+    }
+}
+
+
+@media (max-width:700px){
+    .about__title__h2 {
+        font-size: 38px;
+    }
+}
+
+
+@media (max-width:600px){
+    .questioner_qbout__right,
+    .we_don__left{
+       opacity: 0.1;
+       max-height: 480px;
+    }
+
+    .we_don__item,
+    .questioner_qbout__item{
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .about__title__h2 {
+        font-size: 34px;
+    }
+}
+
+
+@media(max-width:550px){
+    .about {
+        padding: 180px 0 100px 0;
+    }
+
+    .about__title__h2 {
+        font-size: 30px;
+    }
+}
+
+
+@media(max-width:400px){
+    .about__title__h2 {
+        font-size: 26px;
+    }
+}

@@ -23,7 +23,7 @@
         <section class="container">
             <div class="products__cart">
                 <h2 class="products__title__h2">Наши продукты</h2>
-                <a href="#" class="products__link">Узнать больше <span><i class="fa-solid fa-angle-right"></i></span></a>
+                <router-link to="/OurProducts" class="products__link">Узнать больше <span><i class="fa-solid fa-angle-right"></i></span></router-link>
             </div>
 
             <ProductsList :products="products"></ProductsList>
@@ -39,7 +39,7 @@
         <section class="container">
             <div class="products__cart">
                 <h2 class="products__title__h2">Профессиональные услуги</h2>
-                <a href="#" class="products__link">все услуги <span><i class="fa-solid fa-angle-right"></i></span></a>
+                <router-link to="/Services" class="products__link">все услуги <span><i class="fa-solid fa-angle-right"></i></span></router-link>
             </div>
 
             <Services :services="services"></Services>
@@ -55,7 +55,7 @@
         <section class="container">
             <div class="products__cart">
                 <h2 class="products__title__h2">Тарифы нашего конструктора</h2>
-                <a href="#" class="products__link">Все тарифы <span><i class="fa-solid fa-angle-right"></i></span></a>
+                <router-link to="/OurConstructor" class="products__link">Все тарифы <span><i class="fa-solid fa-angle-right"></i></span></router-link>
             </div>
             
             <OurConstructor :constructors="constructors"></OurConstructor>
@@ -72,7 +72,7 @@
        <section class="container">
             <div class="products__cart">
                 <h2 class="products__title__h2">Магазин исследований</h2>
-                <a href="#" class="products__link">Все исследования <span><i class="fa-solid fa-angle-right"></i></span></a>
+                <router-link to="/ResearchStore" class="products__link">Все исследования <span><i class="fa-solid fa-angle-right"></i></span></router-link>
             </div>
             
             <ResearchStore :researchs="researchs"></ResearchStore>
@@ -91,7 +91,7 @@
 
                         <div class="ResearchStore__text__item">
                             <p>
-                                - это компания, предоставляющая комплексные решения для проведения онлайн-опросов. К нашим услугам обращаются рекламные и маркетинговые агентства, производители и ретейлеры, маркетологи и маркетинговые подразделения корпораций. С 2011 г. успешно реализуем общероссийские и региональные проекты по исследованию потребителей, тестированию рекламных макетов, опросу сотрудников компаний и сбору общественного мнения.
+                                Анкетолог- это компания, предоставляющая комплексные решения для проведения онлайн-опросов. К нашим услугам обращаются рекламные и маркетинговые агентства, производители и ретейлеры, маркетологи и маркетинговые подразделения корпораций. С 2011 г. успешно реализуем общероссийские и региональные проекты по исследованию потребителей, тестированию рекламных макетов, опросу сотрудников компаний и сбору общественного мнения.
                                 Наша цель – сделать онлайн-опросы эффективнее, проще и доступнее как в России, так и за ее пределами.
                             </p>
                         </div>
@@ -131,7 +131,7 @@
        <section class="container">
             <div class="products__cart">
                 <h2 class="products__title__h2">Инфоресурс</h2>
-                <a href="#" class="products__link">Смотреть все <span><i class="fa-solid fa-angle-right"></i></span></a>
+                <router-link to="/InformationResource" class="products__link">Смотреть все <span><i class="fa-solid fa-angle-right"></i></span></router-link>
             </div>
 
             <InformationSlick :resources="resources"></InformationSlick>
@@ -171,13 +171,32 @@ export default {
     data(){
         return{
             brands:MarketingBrandJs,
-            products:ProductsJs,
-            services:ServicesJs,
-            constructors:OurConstructorJs,
             researchs:ResearchStoreJs,
             numbers:ResearchNumberJs,
             resources:InformationSlickJs,
+            page:1,
+            productsPerPage:3,
+            minpage:1,
+            maxpage:5,
         }
+    },
+
+
+    computed:{
+        products(){
+          const offset = (this.page - 1) * this.productsPerPage;
+          return ProductsJs.slice(offset, offset + this.productsPerPage);
+        },
+
+        services(){
+          const offset = (this.minpage - 1) * this.maxpage;
+          return ServicesJs.slice(offset, offset + this.maxpage);
+        },
+
+        constructors(){
+          const offset = (this.page - 1) * this.productsPerPage;
+          return OurConstructorJs.slice(offset, offset + this.productsPerPage);
+        },
     }
 }
 </script>
