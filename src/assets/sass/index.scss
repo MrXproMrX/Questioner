@@ -4,6 +4,8 @@
 @import '_AboutCompany';
 @import '_Contacts';
 @import '_ResearchStoreIn';
+@import '_DatabaseFAQ';
+@import '_SampleQuestionnaires';
 
 
 body{
@@ -112,6 +114,7 @@ body{
     &__name_m{
         display: none;
         position: absolute;
+        width:85%;
         z-index: 10;
         top: 100%;
         left: 0;
@@ -1645,7 +1648,10 @@ body{
     .requisites__list,
     .ResearchStore__list__cart,
     .Information__list__cart,
-    .ResearchStoreIn__list{
+    .ResearchStoreIn__list,
+    .DatabaseFAQ__list,
+    .SampleQuestionnaires__list,
+    .about__cart{
         margin-left: 60px;
         margin-right: 60px;
     }
@@ -1689,7 +1695,9 @@ body{
     .persons,
     .requisites,
     .contacts,
-    .ResearchStoreIn{
+    .ResearchStoreIn,
+    .DatabaseFAQ,
+    .SampleQuestionnaires{
         margin-bottom: 60px;
     }
 }
@@ -1839,7 +1847,10 @@ body{
     .requisites__list,
     .ResearchStore__list__cart,
     .Information__list__cart,
-    .ResearchStoreIn__list{
+    .ResearchStoreIn__list,
+    .DatabaseFAQ__list,
+    .SampleQuestionnaires__list,
+    .about__cart{
         margin-left: 30px;
         margin-right: 30px;
     }
@@ -1873,7 +1884,9 @@ body{
     .questioner_qbout,
     .contacts,
     .requisites,
-    .ResearchStoreIn{
+    .ResearchStoreIn,
+    .DatabaseFAQ,
+    .SampleQuestionnaires{
         margin-bottom: 30px;
     }
 

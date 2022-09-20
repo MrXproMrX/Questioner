@@ -9,6 +9,8 @@ import OurConstructorRatesViews from '../views/OurConstructorRatesViews'
 import InformationResourceViews from '../views/InformationResourceViews'
 import ResearchStoreInViews from '../views/ResearchStoreInViews'
 import InformationResourceInViews from '../views/InformationResourceInViews'
+import DatabaseFAQViews from '../views/DatabaseFAQViews'
+import SampleQuestionnairesViews from '../views/SampleQuestionnairesViews'
 
 const routes = [
   {
@@ -69,6 +71,18 @@ const routes = [
     path: '/InformationResourceIn/:id',
     name: 'InformationResourceIn',
     component: InformationResourceInViews
+  },
+
+  {
+    path: '/DatabaseFAQV',
+    name: 'DatabaseFAQV',
+    component: DatabaseFAQViews
+  },
+
+  {
+    path: '/SampleQuestionnaires',
+    name: 'SampleQuestionnaires',
+    component: SampleQuestionnairesViews
   },
 ]
 

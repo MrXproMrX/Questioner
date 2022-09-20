@@ -2,11 +2,12 @@
    <section>
 
     <!-- Marketing start -->
+
         <div class="marketing">
             <img class="marketing__fon" src="../../assets/foto/fon.png" alt="fon">
             <section class="container">
                 <div class="marketing__list">
-                    <h1 class="marketing__title__h1">Маркетинговые<br>онлайн-исследования</h1>
+                    <h1 class="marketing__title__h1">Маркетинговые онлайн-исследования</h1>
                     <h3 class="marketing__title__h3">Онлайн-опросы оперативно и качественно</h3>
                     <a href="#!" class="marketing__link">Начать пользоваться сервисом</a>
                 </div>
@@ -14,6 +15,7 @@
                 <BrandSlick :brands="brands"></BrandSlick>
             </section>
         </div>
+
     <!-- Marketing ent -->
 
 
@@ -23,7 +25,7 @@
         <section class="container">
             <div class="products__cart">
                 <h2 class="products__title__h2">Наши продукты</h2>
-                <router-link to="/OurProducts" class="products__link">Узнать больше <span><i class="fa-solid fa-angle-right"></i></span></router-link>
+                <router-link to="/OurProducts" class="products__link">Узнать больше<span><i class="fa-solid fa-angle-right"></i></span></router-link>
             </div>
 
             <ProductsList :products="products"></ProductsList>
@@ -130,7 +132,7 @@
    <div class="Information">
        <section class="container">
             <div class="products__cart">
-                <h2 class="products__title__h2">Инфоресурс</h2>
+                <h2 class="products__title__h2" @click="ru">Инфоресурс {{slikTitle}}</h2>
                 <router-link to="/InformationResource" class="products__link">Смотреть все <span><i class="fa-solid fa-angle-right"></i></span></router-link>
             </div>
 
@@ -180,7 +182,6 @@ export default {
             maxpage:5,
         }
     },
-
 
     computed:{
         products(){
