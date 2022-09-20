@@ -61,20 +61,14 @@ export default[
         link:'#',
         menuNone:[
             {
-                text:'Привлечение респондентов ',
-                link:'#',
-                id:'h1',
-            },
-
-            {
                 text:'Привлечение заказчиков',
-                link:'#',
+                link:'/SampleQuestionnaires',
                 id:'h2',
             },
 
             {
                 text:'FAQ',
-                link:'#',
+                link:'/DatabaseFAQV',
                 id:'h3',
             },
         ]
